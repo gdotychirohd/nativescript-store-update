@@ -4,8 +4,8 @@ export const GooglePlayConstants = {
   `,
   PLAY_STORE_ROOT_WEB: `https://play.google.com/store/apps/details`,
   REGEX: {
-    DATE: /itemprop="datePublished">\s*([\w\s,.]*)\s*<\/div>\s*<\/div>/gm,
-    OS: /itemprop="operatingSystems">\s*([0-9.]*)[\w\s,]*<\/div>\s*<\/div>/gm,
-    VERSION: /itemprop="softwareVersion">\s*([0-9.]*)\s*<\/div>\s*<\/div>/gm,
+    DATE: /Updated<(.|\n)?>(\w*\s\d{1,2},\s\d{4})/gm,
+    OS: /Requires\sAndroid<(.|\n)?>(\d{1,3}(.\d{1,3}(.\d{1,3})?)?)/gm,
+    VERSION: /Current\sVersion<(.|\n)*?>(\d{1,3}(.\d{1,3}(.\d{1,3})?)?)/gm
   },
 }
