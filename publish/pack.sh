@@ -30,15 +30,16 @@ pack() {
     cd "$TO_SOURCE_DIR"
     npm i
     npx tsc
-    cd ..
+    find ./ -name "*.ts" -delete
+    rm -rf node_modules
 
-    echo 'Creating package...'
+    # echo 'Creating package...'
     # create package dir
-    mkdir "$PACK_DIR"
+    # mkdir "$PACK_DIR"
 
     # create the package
-    cd "$PACK_DIR"
-    npm pack ../"$TO_SOURCE_DIR"
+    # cd "$PACK_DIR"
+    # npm pack ../"$TO_SOURCE_DIR"
 
     # delete source directory used to create the package
     # cd ..
